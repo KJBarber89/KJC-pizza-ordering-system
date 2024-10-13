@@ -2,5 +2,5 @@
 
 require "database.php";
 
-$header = "Welcome to KJC Pizza";
+$header = "Welcome to Byte-A-Slice Pizza";
 $info = getInfo();
