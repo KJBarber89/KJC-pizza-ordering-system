@@ -3,7 +3,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalPriceElement = document.getElementById('totalPrice');
     const orderButton = document.getElementById('orderNow');
 
-    form.addEventListener('change', function () {
+    form.addEventListener('change', calculatePrice);
+    
+    orderButton.addEventListener('click', function () {
+        // Get the final total price
+        const finalPrice = totalPriceElement.textContent;
+
+        // Show a confirmation or submit order
+        alert("Your order has been placed! Total: $" + finalPrice);
+
+        // Optionally, log the order details to the console
+        console.log("Order placed! Total price: $" + finalPrice);
+    });
+
+    function calculatePrice(){
+        
         let totalPrice = 0;
 
         // Calculate price for selected pizza size
@@ -32,17 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log("Total price:", totalPrice);
         totalPriceElement.textContent = totalPrice.toFixed(2);
-    });
-    orderButton.addEventListener('click', function () {
-        // Get the final total price
-        const finalPrice = totalPriceElement.textContent;
+    }
 
-        // Show a confirmation or submit order
-        alert("Your order has been placed! Total: $" + finalPrice);
-
-        // Optionally, log the order details to the console
-        console.log("Order placed! Total price: $" + finalPrice);
-    });
+    calculatePrice();
 });
 
 
