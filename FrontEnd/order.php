@@ -45,7 +45,7 @@ $toppings = getToppings();
                 <label for="pizza-size">Choose your Pizza Size:</label>
                 <select id="pizza-size">
                 <?php foreach ($sizes as $size): ?>
-                <option data-price="<?=$size["price"]?>"><?=$size["name"]?> $<?=$size["price"]?></option>
+                <option data-name="<?=$size["name"]?>"data-price="<?=$size["price"]?>"><?=$size["name"]?> $<?=$size["price"]?></option>
                 <?php endforeach; ?>
                 </select>
                 </div>
@@ -80,9 +80,38 @@ $toppings = getToppings();
                 </div>
                 
                 <h2>Total Price: $<span id="totalPrice">0</span></h2>
-                <button type="button" id="orderNow">Order Now</button>
+                
             </form>
         </section>
+        <div>   
+            <h3> Enter information below.</h3>
+            <label>First Name :</label>
+            <input type="text" id="first_name"> <br>
+            <br>
+            <label>Last Name :</label>
+            <input type="text" id="last_name"> <br>
+            <br>
+            <label>Address :</label>
+            <input type="text" id="address"> <br>
+        </div>
+        <div>
+            <h3> Enter card information below.</h3>
+            <label>Card Number :</label>
+            <input> <br>
+            <br>
+            <label>Expiration Date :</label>
+            <input> <br>
+            <br>
+            <label>CVV :</label>
+            <input> <br>
+            <br>
+            <label>Cardholder's Name :</label>
+            <input> <br>
+            <br>
+            <label>Billing Address :</label>
+            <input> <br>
+            <br>
+            <button type="button" id="orderNow">Order Now</button>
     </main>
     <script src="scripts.js"></script>
 </body>

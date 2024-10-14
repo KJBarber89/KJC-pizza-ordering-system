@@ -1,6 +1,6 @@
 <?php 
 
-$pdo = new PDO("sqlite:KJC.sqlite");
+$pdo = new PDO("sqlite:Byte-A-Slice_Pizza.sqlite");
 
 function query($sql) {
     global $pdo;

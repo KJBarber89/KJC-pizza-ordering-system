@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const orderButton = document.getElementById('orderNow');
 
     form.addEventListener('change', calculatePrice);
-    
+
     orderButton.addEventListener('click', function () {
         // Get the final total price
         const finalPrice = totalPriceElement.textContent;
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Optionally, log the order details to the console
         console.log("Order placed! Total price: $" + finalPrice);
+        getCustomerInfo();
     });
 
     function calculatePrice(){
@@ -46,6 +47,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log("Total price:", totalPrice);
         totalPriceElement.textContent = totalPrice.toFixed(2);
+    }
+
+    function getCustomerInfo() {
+
+        orderFirstName = document.getElementById("first_name");
+        orderFirstName = orderFirstName.value;
+        console.log(orderFirstName);
+
+        orderLastName = document.getElementById("last_name");
+        orderLastName = orderLastName.value;
+        console.log(orderLastName);
+        
+        orderAddress = document.getElementById("address");
+        orderAddress = orderAddress.value;
+        console.log(orderAddress);
     }
 
     calculatePrice();
