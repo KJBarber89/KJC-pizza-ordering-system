@@ -2,14 +2,15 @@
 
 $pdo = new PDO("sqlite:Byte-A-Slice_Pizza.sqlite");
 
-function query($sql) {
+function query($sql, $parameters = null) {
     global $pdo;
-    $stmt = $pdo->query($sql);
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($parameters);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getInfo() {
-    return query("SELECT * FROM website_info WHERE id=1");
+    return query("SELECT * FROM website_info WHERE id=?" , [1]);
 }
 
 function getSizes() {
