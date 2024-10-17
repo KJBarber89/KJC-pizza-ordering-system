@@ -18,6 +18,8 @@ if ($pizzaToppings == NULL) {
     $pizzaToppings = [];
 }
 
+insertOrderInfo($firstName, $lastName, $address, $pizzaSize, $pizzaCrust, implode(',', $pizzaToppings), $totalPrice);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
