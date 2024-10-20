@@ -115,3 +115,9 @@ main #aboutuscontainer {
     align-items: center;
 }
 
+main form #total-price {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
