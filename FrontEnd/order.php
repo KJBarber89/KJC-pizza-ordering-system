@@ -11,6 +11,7 @@ $toppings = getToppings();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@ $toppings = getToppings();
 
 <body>
     <header>
-        <h1><?=$header?></h1>
+        <h1><?= $header ?></h1>
     </header>
     <nav>
         <ul>
@@ -41,47 +42,47 @@ $toppings = getToppings();
             <h2>Order Your Pizza</h2>
             <form id="pizzaForm" action="order_summary.php" method="POST">
                 <div>
-                <label for="pizza-size">Choose your Pizza Size:</label>
-                <select id="pizza-size" name="pizza-size">
-                <?php foreach ($sizes as $size): ?>
-                <option value="<?=$size["name"]?>" data-price="<?=$size["price"]?>"><?=$size["name"]?> $<?=$size["price"]?></option>
-                <?php endforeach; ?>
-                </select>
+                    <label for="pizza-size">Choose your Pizza Size:</label>
+                    <select id="pizza-size" name="pizza-size">
+                        <?php foreach ($sizes as $size): ?>
+                            <option value="<?= $size["name"] ?>" data-price="<?= $size["price"] ?>"><?= $size["name"] ?> $<?= $size["price"] ?></option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
 
                 <div>
-                <label for="crust">Choose your Crust:</label>
-                <select id="crust" name="crust">
-                <?php foreach ($crusts as $crust): ?>
-                <option value="<?=$crust["name"]?>" data-price="<?=$crust["price"]?>"><?=$crust["name"]?> $<?=$crust["price"]?></option>
-                <?php endforeach; ?>
-                </select>
+                    <label for="crust">Choose your Crust:</label>
+                    <select id="crust" name="crust">
+                        <?php foreach ($crusts as $crust): ?>
+                            <option value="<?= $crust["name"] ?>" data-price="<?= $crust["price"] ?>"><?= $crust["name"] ?> $<?= $crust["price"] ?></option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
 
                 <div>
-                <label>Choose your Meats:</label>
-                <?php foreach ($toppings as $topping): ?>
-                    <?php if ($topping["category"] == "meat"): ?>
-                    <input type="checkbox" id="<?=$topping["name"]?>" name="toppings[]" value="<?=$topping["name"]?>" data-price="<?=$topping["price"]?>">
-                    <label for="<?=$topping["name"]?>"><?=$topping["name"]?> $<?=$topping["price"]?></label>
-                    <?php endif; ?>
-                <?php endforeach; ?>
+                    <label>Choose your Meats:</label>
+                    <?php foreach ($toppings as $topping): ?>
+                        <?php if ($topping["category"] == "meat"): ?>
+                            <input type="checkbox" id="<?= $topping["name"] ?>" name="toppings[]" value="<?= $topping["name"] ?>" data-price="<?= $topping["price"] ?>">
+                            <label for="<?= $topping["name"] ?>"><?= $topping["name"] ?> $<?= $topping["price"] ?></label>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
 
                 <div>
-                <label>Choose your Veggies:</label>
-                <?php foreach ($toppings as $topping): ?>
-                    <?php if ($topping["category"] == "vegetable"): ?>
-                    <input type="checkbox" id="<?=$topping["name"]?>" name="toppings[]" value="<?=$topping["name"]?>" data-price="<?=$topping["price"]?>">
-                    <label for="<?=$topping["name"]?>"><?=$topping["name"]?> $<?=$topping["price"]?></label>
-                    <?php endif; ?>
-                <?php endforeach; ?>
+                    <label>Choose your Veggies:</label>
+                    <?php foreach ($toppings as $topping): ?>
+                        <?php if ($topping["category"] == "vegetable"): ?>
+                            <input type="checkbox" id="<?= $topping["name"] ?>" name="toppings[]" value="<?= $topping["name"] ?>" data-price="<?= $topping["price"] ?>">
+                            <label for="<?= $topping["name"] ?>"><?= $topping["name"] ?> $<?= $topping["price"] ?></label>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
-                
+
                 <label>Total Price :</label>
                 <input type="text" id="total-price" name="total-price" readonly>
 
-                <div>   
+                <div>
                     <h3> Enter information below.</h3>
                     <label>First Name :</label>
                     <input type="text" id="first-name" name="first-name" required> <br>
@@ -117,4 +118,5 @@ $toppings = getToppings();
     </main>
     <script src="scripts.js"></script>
 </body>
+
 </html>

@@ -24,6 +24,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .popup {
     display: none;
     position: fixed;
@@ -55,7 +56,7 @@ nav {
     display: flex;
     justify-content: center;
     background: lightgray;
-    
+
 }
 
 nav div {
@@ -86,7 +87,7 @@ nav li a:hover {
 
 nav li a.currentPage {
     text-decoration: underline;
-    color: red; 
+    color: red;
 }
 
 main #promotioncontainer {
@@ -120,4 +121,9 @@ main form #total-price {
     border: none;
     outline: none;
     padding: 0;
+}
+
+main form #login-container {
+    justify-content: center;
+    align-items: center;
 }
