@@ -7,6 +7,7 @@ $cookieName = "auth";
 
 $info = getInfo();
 
+
 function html_dump($object)
 {
     echo "<pre>";

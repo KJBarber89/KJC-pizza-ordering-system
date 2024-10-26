@@ -62,7 +62,6 @@ insertOrderInfo($firstName, $lastName, $address, $pizzaSize, $pizzaCrust, implod
             <br>
             <label id="total-price">Total Price : <?= $totalPrice ?></label>
     </main>
-    <script src="scripts.js"></script>
 </body>
 
 </html>
