@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('change', calculatePrice);
 
-    function calculatePrice(){
-        
+    function calculatePrice() {
+
         let totalPrice = 0;
 
         // Calculate price for selected pizza size

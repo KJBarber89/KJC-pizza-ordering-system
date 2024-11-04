@@ -5,6 +5,7 @@ require "include.php";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@ require "include.php";
 
 <body>
     <header>
-        <h1><?=$header?></h1>
+        <h1><?= $header ?></h1>
     </header>
     <nav>
         <ul>
@@ -25,7 +26,18 @@ require "include.php";
         </ul>
     </nav>
     <main>
+        <form action="credential_handling.php" method="POST">
+            <div id="login-container">
+                <label for="username"><b>Username: </b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <br>
+                <label for="password"><b>Password: </b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </div>
+        </form>
     </main>
-    <script src="scripts.js"></script>
 </body>
+
 </html>
