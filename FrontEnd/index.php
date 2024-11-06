@@ -26,7 +26,6 @@ require "include.php";
             <ul>
                 <li><a class="currentPage" href="index.php">Home</a></li>
                 <li><a href="order.php">Order</a></li>
-                <li><a href="login.php">Log In</a></li>
             </ul>
         </div>
     </nav>
